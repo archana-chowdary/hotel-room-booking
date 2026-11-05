@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏨 Hotel Room Booking System</h1>
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Customer Name"
+            required
+        >
+
+        <select id="roomType" required>
+
+            <option value="">Select Room Type</option>
+
+            <option>Single Room</option>
+
+            <option>Double Room</option>
+
+            <option>Deluxe Room</option>
+
+            <option>Suite Room</option>
+
+        </select>
+
+        <input
+            type="number"
+            id="guests"
+            placeholder="Number of Guests"
+            min="1"
+            required
+        >
+
+        <label>Check-In Date</label>
+
+        <input
+            type="date"
+            id="checkIn"
+            required
+        >
+
+        <label>Check-Out Date</label>
+
+        <input
+            type="date"
+            id="checkOut"
+            required
+        >
+
+        <button type="submit">
+            Book Room
+        </button>
+
+    </form>
+
+    <br>
+
+    <button onclick="getBookings()">
+        View Bookings
+    </button>
+
+    <br><br>
+
+    <div id="bookings"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
